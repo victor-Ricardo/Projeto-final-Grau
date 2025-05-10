@@ -1,0 +1,15 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    padding: 100px;
+}
+.cartao{
+    background-color: #070d12;
+    width: 350px;
+    height: 350px;
+    border: 2px solid #e126d9;
+    border-radius: 10px;
+    overflow: auto;
+}

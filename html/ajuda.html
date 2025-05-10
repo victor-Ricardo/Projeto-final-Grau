@@ -1,21 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto-Final</title>
+    <title>Ajuda</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variaveis.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/responsivo.css">
+    <link rel="stylesheet" href="../css/ajuda.css">
+
 </head>
+
 <body>
-    <header>
-<nav>
-    <ul>
-        <li><a href="../index.html">sobre</a></li>
-        <li><a href="./html/painelDeAcao.html">Paiel de Açoes</a></li>
-    </ul>
-</nav>
+    <header class="header">
+        <div class="container">
+            <div class="row justify-content-between alinhar-itens-no-centro">
+                <a href="#">
+                    <h1 class="logo">AJUDA</h1>
+                </a>
+
+                <nav>
+                    <input type="checkbox" id="menu-hamburguer" />
+
+                    <label for="menu-hamburguer">
+                        <div class="menu">
+                            <span class="hamburguer"></span>
+                        </div>
+                    </label>
+
+                    <ul>
+                        <li><a href="./painelDeAcao.html">Painel de Ações</a></li>
+                        <li><a href="../index.html">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
-    <h1>suporte</h1>
-    <section>
+    <main class="main">
+    <section class="cartao">
         <form action="get">
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome">
@@ -27,18 +52,23 @@
             <textarea name="duvida" id="duvida"></textarea>
         </form>
     </section>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="container">
+            
+            <h2>Entre em contato conosco</h2>
+            <div class="redes-sociais"> 
+                <a href="" target="_blank" class="outer-shadow">
+                    <img src="../imagens/whatsapp_1384095.png" alt="">
+                </a>
+                <a href="" target="_blank" class="outer-shadow">
+                    <img src="../imagens/o-email.png" alt="">
+                </a>
+                <br><br>
+                <p>Todos direitos reservados &copy;</p>
+            </div>
+        </div>
+    </footer>
 </body>
-<footer>
-    <h4>
-        Todos direitos reservados &copy;
-    </h4>
-    <h4>
-        <address>
-            Entre em contato conosco
-            <a href=""><img src="../imagens/whatsapp_1384095.png" alt="">
-                3199472180</a>
-            <a href=""><img src="../imagens/o-email.png" alt="">Manutencao@gmail.com</a>
-        </address>
-    </h4>
-</footer>
+
 </html>
