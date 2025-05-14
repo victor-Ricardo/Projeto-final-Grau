@@ -22,7 +22,7 @@
 
     .header nav ul{
         display: none;
-        background-color: var(--cor-fundo-escuro);
+        background-color: var(--cor-fundo-claro);
         padding: 20px;
     }
 

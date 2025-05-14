@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/responsivo.css">
     <link rel="stylesheet" href="../css/ajuda.css">
-
 </head>
 
 <body>
@@ -39,25 +38,45 @@
             </div>
         </div>
     </header>
-    <main class="main">
-    <section class="cartao">
-        <form action="get">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome">
-            <label for="telefone">telefone</label>
-            <input type="text" name="telefone" id="telefone">
-            <label for="email">email</label>
-            <input type="email" name="email" id="email">
-            <label for="duvida">digite sua duvida</label>
-            <textarea name="duvida" id="duvida"></textarea>
-        </form>
+    <section class="main">
+        <section class="cartao">
+            <h2>INSIRA SUAS INFORMAÇÕES ABAIXO</h2>
+
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
+
+                <label for="duvida">Qual a sua dúvida?</label>
+                <select id="duvida" name="duvida" required>
+                    <option value=""> selecione </option>
+                    <option value="falhas">1 - Falhas</option>
+                    <option value="sugestoes">2 - Sugestões</option>
+                    <option value="outros">3 - Outros</option>
+                </select>
+
+                <label for="relato">Detalhe seu relato:</label>
+                <textarea id="relato" name="relato" rows="4" required></textarea>
+
+                <div class="form-buttons">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+
+
+            </form>
+        </section>
     </section>
-    </main>
     <footer class="footer" id="footer">
         <div class="container">
-            
+
             <h2>Entre em contato conosco</h2>
-            <div class="redes-sociais"> 
+            <div class="redes-sociais">
                 <a href="" target="_blank" class="outer-shadow">
                     <img src="../imagens/whatsapp_1384095.png" alt="">
                 </a>

@@ -6,10 +6,11 @@
     padding: 100px;
 }
 .cartao{
-    background-color: #070d12;
+    background-color: var(--cor-fundo-claro);
     width: 350px;
-    height: 350px;
-    border: 2px solid #e126d9;
+    height: 250px;
+    border: 2px solid var(--cor-secundaria);
     border-radius: 10px;
+    padding: 0 10px;
     overflow: auto;
 }
