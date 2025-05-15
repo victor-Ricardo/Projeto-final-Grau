@@ -1,0 +1,48 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.cartao {
+    background-color: var(--cor-fundo-cinza-claro);
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(535px, 1fr));
+    gap: 10px;
+    width: 1200px;
+
+}
+.scripts{
+    background-color: var(--cor-fundo-claro);
+    width: 540px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 15px;
+    padding: 5PX;
+}
+
+.scripts p{
+    max-height: 250px;
+    max-width: 300px;
+}
+
+.scripts h3{
+    text-align: center;
+        width: 90px;
+
+}
+
+.scripts img {
+    width: 90px;
+    background-color: var(--cor-primaria);
+    padding: 10px;
+    border-radius: 25%;
+}
