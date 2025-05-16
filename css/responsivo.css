@@ -1,6 +1,27 @@
-@media(max-width: 1020px){
+@media(max-width: 1200px){
     .header{
         padding: var(--mobile-padding);
+    }
+.main {
+    padding: 10px;
+}
+    .cartao{
+        width: 1000px;
+        grid-template-columns: repeat(auto-fill, minmax(475px, 1fr));
+
+    }
+
+    .scripts{
+        width: 480px;
+    }
+}
+
+@media(max-width: 1020px){
+    .cartao{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -31,5 +52,24 @@
         text-align: center;
         padding: 20px;
         display: block;
+    }
+
+ 
+}
+
+@media(max-width: 520px){
+    .scripts{
+        height: auto;
+        width: 95%;
+    }
+    .cartao{
+        width: 95%;
+    }
+}
+
+
+@media(max-width: 425px){
+    .scripts{
+        flex-wrap: wrap;
     }
 }

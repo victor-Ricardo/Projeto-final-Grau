@@ -9,12 +9,15 @@
     background-color: var(--cor-fundo-cinza-claro);
     border: 2px solid var(--cor-secundaria);
     border-radius: 10px;
-    padding: 10px;
+    padding: 15px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(535px, 1fr));
-    gap: 10px;
-    width: 1200px;
+    gap: 15px;
+    width: 1150px;
 
+}
+.cartao a:hover {
+    transform: scale(1.05);
 }
 .scripts{
     background-color: var(--cor-fundo-claro);
@@ -26,7 +29,8 @@
     gap: 10px;
     border: 1px solid var(--cor-secundaria);
     border-radius: 15px;
-    padding: 5PX;
+    padding: 5px;
+    
 }
 
 .scripts p{
