@@ -45,6 +45,12 @@
         display: none;
         background-color: var(--cor-fundo-claro);
         padding: 20px;
+        
+    
+    }
+
+    .header nav li{
+        margin: 10px;
     }
 
     .header nav li a {
@@ -52,9 +58,8 @@
         text-align: center;
         padding: 20px;
         display: block;
-    }
 
- 
+    }
 }
 
 @media(max-width: 520px){
@@ -71,5 +76,11 @@
 @media(max-width: 425px){
     .scripts{
         flex-wrap: wrap;
+    }
+
+    .header .hamburguer{
+        margin-top:75%;
+        
+        
     }
 }

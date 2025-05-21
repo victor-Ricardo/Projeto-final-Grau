@@ -5,21 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós</title>
+    <title>Painel de Ação</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/variaveis.css">
     <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/sobre.css">
+    <link rel="stylesheet" href="./css/painelDeAcao.css">
     <link rel="stylesheet" href="./css/responsivo.css">
 
 </head>
 
 <body>
+    <form action="" class="pop-up">
+        <div class="alert">
+        <p id="menssagem">Realmente gostaria de executar o script para </p>
+        <button id="cancelar">Cancelar</button>
+        <button id="confirmar">Confirmar</button>
+        </div>
+    </form>
     <header class="header">
         <div class="container">
             <div class="row justify-content-between alinhar-itens-no-centro">
                 <a href="#">
-                    <h1 class="logo">SOBRE</h1>
+                    <h1 class="logo">PAINEL DE AÇÕES</h1>
                 </a>
 
                 <nav>
@@ -32,37 +39,67 @@
                     </label>
 
                     <ul>
-                        <li><a href="./html/painelDeAcao.html">Painel de Ações</a></li>
                         <li><a href="./html/ajuda.html">Ajuda</a></li>
+                        <li><a href="./html/sobre.html">Sobre</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-<main class="main">
-    <section class="cartao">
-        <P><br>Somos uma empresa focada na criação de scripts para facilitar a sua vida tecnológica!<br><br>
-            Cedemos scripts baseados em Windows Powershell com a finalidade de atender diversas demandas de maneira eficaz e ágil, através de uma aplicação WEB capaz de entregar o necessário para a implementação dos scripts dentro seu servidor Local ou Web.
-            <br><br>
-            Venha Conhecer!</P>
+    <section class="main">
+        <section class="cartao">
+            <a href="www.google.com" class="scripts" id="atualizar">
+                <img src="./images/icons8-actualizar-40.png" alt="icon atualizar">
+                <h3>Atualizar Aplicativos</h3>
+                <p>Será feita atualizações de softwares de forma centralizada via script permitindo manter todos os sistemas atualizados em dia de maneira rápida e uniforme. Desta maneira aumentando a segurança, reduzindo falhas e simplificando a gestão de múltiplos dispositivos em um ambiente tecnológico.</p>
+            </a>
+            <a href="" class="scripts" id="download">
+                <img src="./images/download_5894960.png" alt="icon atualizar">
+                <h3>Baixar Aplicativos</h3>
+                <p>É um método automatizado de instalação e gerenciamento via script de programas rapidamente, sem a necessidade de intervenção manual. Essa abordagem garante rapidez e agilidade junto da padronização e redução de erros durante todo o processo.</p>
+            </a>
+            <a href="" class="scripts" id="limpar">
+                <img src="./images/broom_10789477.png" alt="icon atualizar">
+                <h3>Limpeza</h3>
+                <p>Irá realizar a limpeza de cache, logs e arquivos temporários, junto com o desligamento agendado otimizando o desempenho do sistema e liberando espaço em disco de maneira automática garantindo a manutenção regular e eficiente sem necessidade de interação manual.</p>
+            </a>
+            <a href="" class="scripts" id="usuario">
+                <img src="./images/silhueta-de-multiplos-usuarios.png" alt="icon atualizar">
+                <h3>Usuarios</h3>
+                <p>A criação de usuários em massa via script permite cadastrar múltiplos perfis de forma rápida e padronizada. Essa automação reduz o tempo gasto, evita erros manuais e facilita a gestão de grandes volumes de usuários dentro de um ambiente empresarial.</p>
+            </a>
+            <a href="" class="scripts" id="backup">
+                <img src="./images/icons8-upload-para-a-nuvem-40.png" alt="icon atualizar">
+                <h3>Backup</h3>
+                <p>Uma solução prática para realizar cópias de segurança de forma regular garantindo a proteção dos dados através de um Backup automatizado via script, minimizando os riscos de perda de dados de maneira acidental e aumentando a eficiência do processo.</p>
+            </a>
+            <a href="" class="scripts" id="automacao">
+                <img src="./images/automacao.png" alt="icon atualizar">
+                <h3>Automação</h3>
+                <p>Desenvolvimento de scripts de automação voltados para a coleta de logs, desligamento agendado de sistemas e limpeza periódica de cache, assim otimizando a manutenção e o desempenho dos ambientes operacionais.</p>
+            </a>
+        </section>
     </section>
-    </main>
+
     <footer class="footer" id="footer">
         <div class="container">
-            
+
             <h2>Entre em contato conosco</h2>
-            <div class="redes-sociais"> 
+            <div class="redes-sociais">
                 <a href="" target="_blank" class="outer-shadow">
-                    <img src="./imagens/whatsapp_1384095.png" alt="">
+                    <img src="./images/whatsapp_1384095.png" alt="">
                 </a>
                 <a href="" target="_blank" class="outer-shadow">
-                    <img src="./imagens/o-email.png" alt="">
+                    <img src="./images/o-email.png" alt="">
                 </a>
                 <br><br>
                 <p>Todos direitos reservados &copy;</p>
             </div>
         </div>
     </footer>
+    
+    <script src="./js/index.js"></script>
+
 </body>
 
 </html>
