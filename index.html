@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Painel de Ação com scripts automatizados para gerenciamento de sistemas, usuários, backups e manutenção.">
     <title>Painel de Ação</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/variaveis.css">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/painelDeAcao.css">
     <link rel="stylesheet" href="./css/responsivo.css">
-
 </head>
 
 <body>
-    <form action="" class="pop-up">
+
+    <!-- Pop-up de confirmação -->
+    <div class="pop-up" role="dialog" aria-modal="true">
         <div class="alert">
-        <p id="menssagem">Realmente gostaria de executar o script para </p>
-        <button id="cancelar">Cancelar</button>
-        <button id="confirmar">Confirmar</button>
+            <p id="mensagem"></p>
+			<button type="button" id="cancelar">Cancelar</button>
+			<button type="button" id="confirmar">Confirmar</button>
         </div>
-    </form>
+    </div>
+
+    <!-- Cabeçalho -->
     <header class="header">
         <div class="container">
             <div class="row justify-content-between alinhar-itens-no-centro">
@@ -31,13 +35,11 @@
 
                 <nav>
                     <input type="checkbox" id="menu-hamburguer" />
-
                     <label for="menu-hamburguer">
                         <div class="menu">
                             <span class="hamburguer"></span>
                         </div>
                     </label>
-
                     <ul>
                         <li><a href="./html/ajuda.html">Ajuda</a></li>
                         <li><a href="./html/sobre.html">Sobre</a></li>
@@ -46,58 +48,68 @@
             </div>
         </div>
     </header>
-    <section class="main">
+	
+	<!-- Seção principal -->
+	<section class="main">
         <section class="cartao">
-            <a href="www.google.com" class="scripts" id="atualizar">
-                <img src="./images/icons8-actualizar-40.png" alt="icon atualizar">
-                <h3>Atualizar Aplicativos</h3>
+
+            <a href="https://openai.com/" class="scripts" id="atualizar">
+                <img src="./images/icons8-actualizar-40.png" alt="Ícone de atualização">
+                <h3>Atualização de Softwares</h3>
                 <p>Será feita atualizações de softwares de forma centralizada via script permitindo manter todos os sistemas atualizados em dia de maneira rápida e uniforme. Desta maneira aumentando a segurança, reduzindo falhas e simplificando a gestão de múltiplos dispositivos em um ambiente tecnológico.</p>
             </a>
-            <a href="" class="scripts" id="download">
-                <img src="./images/download_5894960.png" alt="icon atualizar">
-                <h3>Baixar Aplicativos</h3>
+			
+            <a href="#" class="scripts" id="download">
+                <img src="./images/download_5894960.png" alt="Ícone de instalação de software">
+                <h3>Instalação de Softwares</h3>
                 <p>É um método automatizado de instalação e gerenciamento via script de programas rapidamente, sem a necessidade de intervenção manual. Essa abordagem garante rapidez e agilidade junto da padronização e redução de erros durante todo o processo.</p>
             </a>
-            <a href="" class="scripts" id="limpar">
-                <img src="./images/broom_10789477.png" alt="icon atualizar">
-                <h3>Limpeza</h3>
+			
+            <a href="#" class="scripts" id="limpar">
+                <img src="./images/broom_10789477.png" alt="Ícone de limpeza de sistema">
+                <h3>Limpeza de Sistema</h3>
                 <p>Irá realizar a limpeza de cache, logs e arquivos temporários, junto com o desligamento agendado otimizando o desempenho do sistema e liberando espaço em disco de maneira automática garantindo a manutenção regular e eficiente sem necessidade de interação manual.</p>
             </a>
-            <a href="" class="scripts" id="usuario">
-                <img src="./images/silhueta-de-multiplos-usuarios.png" alt="icon atualizar">
-                <h3>Usuarios</h3>
+			
+            <a href="#" class="scripts" id="usuarios">
+                <img src="./images/silhueta-de-multiplos-usuarios.png" alt="Ícone de usuários">
+                <h3>Criação de Usuários</h3>
                 <p>A criação de usuários em massa via script permite cadastrar múltiplos perfis de forma rápida e padronizada. Essa automação reduz o tempo gasto, evita erros manuais e facilita a gestão de grandes volumes de usuários dentro de um ambiente empresarial.</p>
             </a>
-            <a href="" class="scripts" id="backup">
-                <img src="./images/icons8-upload-para-a-nuvem-40.png" alt="icon atualizar">
-                <h3>Backup</h3>
+			
+            <a href="#" class="scripts" id="backup">
+                <img src="./images/icons8-upload-para-a-nuvem-40.png" alt="Ícone de backup">
+                <h3>Backup de Arquivos</h3>
                 <p>Uma solução prática para realizar cópias de segurança de forma regular garantindo a proteção dos dados através de um Backup automatizado via script, minimizando os riscos de perda de dados de maneira acidental e aumentando a eficiência do processo.</p>
             </a>
-            <a href="" class="scripts" id="automacao">
-                <img src="./images/automacao.png" alt="icon atualizar">
-                <h3>Automação</h3>
+			
+            <a href="#" class="scripts" id="automacao">
+                <img src="./images/automacao.png" alt="Ícone de automação de tarefas">
+                <h3>Automação de Tarefas</h3>
                 <p>Desenvolvimento de scripts de automação voltados para a coleta de logs, desligamento agendado de sistemas e limpeza periódica de cache, assim otimizando a manutenção e o desempenho dos ambientes operacionais.</p>
             </a>
+			
         </section>
     </section>
 
+   <!-- Rodapé -->
     <footer class="footer" id="footer">
         <div class="container">
-
             <h2>Entre em contato conosco</h2>
             <div class="redes-sociais">
-                <a href="" target="_blank" class="outer-shadow">
-                    <img src="./images/whatsapp_1384095.png" alt="">
+                <a href="#" target="_blank" class="outer-shadow">
+                    <img src="./images/whatsapp_1384095.png" alt="WhatsApp">
                 </a>
-                <a href="" target="_blank" class="outer-shadow">
-                    <img src="./images/o-email.png" alt="">
+                <a href="#" target="_blank" class="outer-shadow">
+                    <img src="./images/o-email.png" alt="E-mail">
                 </a>
                 <br><br>
                 <p>Todos direitos reservados &copy;</p>
             </div>
         </div>
     </footer>
-    
+
+    <!-- Scripts -->
     <script src="./js/index.js"></script>
 
 </body>

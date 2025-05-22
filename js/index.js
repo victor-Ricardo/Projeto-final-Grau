@@ -1,9 +1,9 @@
-let acaoSelecionada = ""; // guardará a ação atual
+let acaoSelecionada = "";
 
 const botaoAtualizar = document.getElementById("atualizar");
 const botaoInstalar = document.getElementById("download");
 const botaoLimpar = document.getElementById("limpar");
-const botaoUsuarios = document.getElementById("usuario");
+const botaoUsuarios = document.getElementById("usuarios");
 const botaoBackup = document.getElementById("backup");
 const botaoAutomacao = document.getElementById("automacao");
 
@@ -11,62 +11,61 @@ const fecharPopup = document.getElementById("cancelar");
 const rodarScript = document.getElementById("confirmar");
 
 const popup = document.querySelector(".pop-up");
+const paragrafo = document.getElementById("mensagem");
 
-const paragrafo = document.getElementById("mensaagem");
-
-
-function alternarPopup(){
-    popup.classList.toggle("aberto");
+function popupConfirmacao(mensagem) {
+    paragrafo.textContent = mensagem;
+    popup.style.display = "flex";
 }
 
-
-botaoAtualizar.addEventListener("click", (event) =>{
+botaoAtualizar.addEventListener("click", (event) => {
     event.preventDefault();
     acaoSelecionada = "atualizar";
-    paragrafo.textContent += "atualizar os aplicativos?";
-    alternarPopup();
+    popupConfirmacao("Realmente gostaria de executar o script para atualizar os aplicativos?");
 });
 
-botaoInstalar.addEventListener("click", (event) =>{
+botaoInstalar.addEventListener("click", (event) => {
     event.preventDefault();
-    acaoSelecionada = "instalar";
-    paragrafo.textContent += "instalar os aplicativos?";
-    alternarPopup();
+    acaoSelecionada = "download";
+    popupConfirmacao("Realmente gostaria de executar o script para instalar os aplicativos?");
 });
 
-botaoAutomacao.addEventListener("click", (event) =>{
+botaoAutomacao.addEventListener("click", (event) => {
     event.preventDefault();
     acaoSelecionada = "automacao";
-    paragrafo.textContent += "fazer a automação?";
-    alternarPopup();
+    popupConfirmacao("Realmente gostaria de executar o script para fazer a automação?");
 });
 
-botaoBackup.addEventListener("click", (event) =>{
+botaoBackup.addEventListener("click", (event) => {
     event.preventDefault();
     acaoSelecionada = "backup";
-    paragrafo.textContent += "fazer um backup dos arquivos?";
-    alternarPopup();
+    popupConfirmacao("Realmente gostaria de executar o script para fazer um backup dos arquivos?");
 });
 
-botaoLimpar.addEventListener("click", (event) =>{
+botaoLimpar.addEventListener("click", (event) => {
     event.preventDefault();
     acaoSelecionada = "limpar";
-    paragrafo.textContent += "fazer uma limpeza dos arquivos?";
-    alternarPopup();
+    popupConfirmacao("Realmente gostaria de executar o script para fazer uma limpeza dos arquivos?");
 });
 
-botaoUsuarios.addEventListener("click", (event) =>{
+botaoUsuarios.addEventListener("click", (event) => {
     event.preventDefault();
     acaoSelecionada = "usuarios";
-    paragrafo.textContent = "fazer um cadastro de usuários em massa?";
-    alternarPopup();
+    popupConfirmacao("Realmente gostaria de executar o script para cadastrar usuários em massa?");
 });
 
 fecharPopup.addEventListener("click", () => {
-    popup.classList.remove("aberto");
+    popup.style.display = "none";
 });
 
-
 rodarScript.addEventListener("click", () => {
-  
+    fetch(`php/executeScript.php?script=${acaoSelecionada}`)
+        .then(response => response.text())
+        .then(data => {
+            alert("Script funcionou: " + data);
+            popup.style.display = "none";
+        })
+        .catch(error => {
+            alert("Erro ao executar o script: " + error);
+        });
 });

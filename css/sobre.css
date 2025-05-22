@@ -7,10 +7,22 @@
 }
 .cartao{
     background-color: var(--cor-fundo-claro);
-    width: 350px;
-    height: 250px;
+    width: 400px;
+    height: auto;
     border: 2px solid var(--cor-secundaria);
     border-radius: 10px;
     padding: 0 10px;
     overflow: auto;
 }
+
+.cartao p {
+    line-height: 1.6; /* Espaçamento entre linhas para melhorar a legibilidade */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cartao {
+        width: 80%; /* Ajusta a largura do cartão em telas menores */
+        height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
+        padding: 15px; /* Ajuste no padding para não ficar muito espaçado */
+    }

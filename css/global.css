@@ -6,7 +6,8 @@ html{
 }
 
 body{
-    background: linear-gradient(90deg,rgba(35, 115, 235, 1) 0%, rgba(215, 215, 216, 1) 50%, rgba(35, 115, 235, 1) 100%);    font-family: var(--fonte-primaria);
+    background: linear-gradient(90deg,rgba(35, 115, 235, 1) 0%, rgba(215, 215, 216, 1) 50%, rgba(35, 115, 235, 1) 100%);    
+    font-family: var(--fonte-primaria);
     font-size: var(--fonte-normal);
 }
 
@@ -23,7 +24,7 @@ body{
     justify-content: space-between;
 }
 
-.alinhar-iten-no-centro{
+.alinhar-itens-no-centro{
     align-items: center;
 }
 

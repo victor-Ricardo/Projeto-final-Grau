@@ -1,21 +1,41 @@
-*{
+/* Reset básico e boas práticas */
+* {
     margin: 0;
     padding: 0;
     border: none;
-    outline: none;
     font-weight: 300;
     box-sizing: border-box;
 }
 
-a{
+/* Acessibilidade: outline apenas customizado */
+*:focus {
+    outline: 2px solid #007BFF; /* ou outro destaque acessível */
+}
+
+/* Elementos de link */
+a {
     text-decoration: none;
     color: black;
 }
 
-ul,ol{
+/* Listas */
+ul, ol {
     list-style: none;
 }
 
-img{
+/* Imagens responsivas */
+img {
     max-width: 100%;
+    display: block;
+}
+
+/* Adicional sugerido */
+html, body {
+    height: 100%;
+}
+
+button, input, select, textarea {
+    font: inherit;
+    background: none;
+    border: none;
 }

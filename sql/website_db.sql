@@ -61,6 +61,26 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+-- --------------------------------------------------------
+
+-- Estrutura para a tabela `duvidas`
+
+CREATE TABLE `duvidas` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,    -- Identificador único da dúvida (chave primária)
+  `nome` VARCHAR(255) NOT NULL,                 -- Nome do usuário
+  `email` VARCHAR(255) NOT NULL,                -- E-mail do usuário
+  `telefone` VARCHAR(20) NOT NULL,              -- Telefone do usuário
+  `duvida` ENUM('falhas', 'sugestoes', 'outros') NOT NULL,  -- Tipo de dúvida
+  `relato` TEXT NOT NULL,                       -- Descrição detalhada da dúvida
+  `data_envio` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Data e hora de envio
+  PRIMARY KEY (`id`),                           -- Define `id` como chave primária
+  UNIQUE KEY `email` (`email`)                  -- Definir e-mail como único (caso seja necessário)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
