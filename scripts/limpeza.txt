@@ -1,4 +1,0 @@
-powershell "Remove-Item 'C:\Users\*' -Recurse -Force
-rd \s \q C:&Recycle.bin
-powershell "Remove-Item 'C:\Windows\Prefetch\*' -Recurse -Force
-powershell "Remove-item 'C:Windows\temp\*' -Recurse -Force
