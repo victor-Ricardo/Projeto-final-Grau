@@ -18,10 +18,10 @@
 
 }
 .cartao a {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.03s ease-in-out;
 }
 .cartao a:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* Cartões de script */

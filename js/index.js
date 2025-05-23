@@ -9,6 +9,9 @@ const botaoAutomacao = document.getElementById("automacao");
 
 const fecharPopup = document.getElementById("cancelar");
 const rodarScript = document.getElementById("confirmar");
+const main = document.getElementById("main");
+const footer = document.getElementById("footer");
+
 
 const popup = document.querySelector(".pop-up");
 const paragrafo = document.getElementById("mensagem");
@@ -16,6 +19,9 @@ const paragrafo = document.getElementById("mensagem");
 function popupConfirmacao(mensagem) {
     paragrafo.textContent = mensagem;
     popup.style.display = "flex";
+    main.style.display = "none";
+    footer.style.display = "none";
+
 }
 
 botaoAtualizar.addEventListener("click", (event) => {
@@ -56,6 +62,9 @@ botaoUsuarios.addEventListener("click", (event) => {
 
 fecharPopup.addEventListener("click", () => {
     popup.style.display = "none";
+    main.style.display = "flex";
+    footer.style.display = "block";
+
 });
 
 rodarScript.addEventListener("click", () => {
@@ -68,4 +77,6 @@ rodarScript.addEventListener("click", () => {
         .catch(error => {
             alert("Erro ao executar o script: " + error);
         });
+    main.style.display = "flex";
+    footer.style.display = "block";
 });
