@@ -39,7 +39,7 @@ botaoInstalar.addEventListener("click", (event) => {
 botaoAutomacao.addEventListener("click", (event) => {
     event.preventDefault();
     acaoSelecionada = "automacao";
-    popupConfirmacao("Realmente gostaria de executar o script para fazer a automação?");
+    popupConfirmacao("Realmente gostaria de executar o script para fazer a automação de tarefas?");
 });
 
 botaoBackup.addEventListener("click", (event) => {
