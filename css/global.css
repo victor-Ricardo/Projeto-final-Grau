@@ -66,8 +66,7 @@ body{
     height: 65px;
     line-height: 59px;
     text-align: center;
-
-    transition: 0.2s;
+    transition: all 0.2s ease;;
 }
 
 .header a:hover .logo {

@@ -17,6 +17,11 @@
         width: 100%;
         max-width: 480px;
     }
+
+    .scripts img{
+        width: 64px;
+        height: auto;
+    }
 }
 
 /* ====== Breakpoint até 1020px ====== */
@@ -68,7 +73,6 @@
         padding: 10px 15px;
         display: block;
     }
-
     
 }
 
@@ -87,9 +91,7 @@
         flex-direction: column;
         text-align: center;
     }
-    .scripts img {
-        margin-bottom: 10px;
-    }
+
 }
 
 /* ====== Breakpoint até 425px (Smartphones pequenos) ====== */
