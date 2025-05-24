@@ -1,4 +1,7 @@
 <?php
+// Caminho completo para o PowerShell
+$powershellPath = 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe';
+
 // Define os scripts permitidos com caminhos absolutos
 $batFiles = [
     'download'   => __DIR__ . '/scripts/instalacao.ps1',
@@ -9,7 +12,7 @@ $batFiles = [
     'usuarios'   => __DIR__ . '/scripts/criacaoUsuarios.ps1'
 ];
 
-// Verifica se a requisição contém o parâmetro "script"0
+// Verifica se a requisição contém o parâmetro "script"
 if (isset($_GET['script'])) {
     $scriptKey = $_GET['script'];
 
@@ -17,15 +20,20 @@ if (isset($_GET['script'])) {
     if (array_key_exists($scriptKey, $batFiles)) {
         $scriptPath = $batFiles[$scriptKey];
 
-        // Executa o script PowerShell e captura a saída
-        $command = "powershell -ExecutionPolicy Bypass -File \"$scriptPath\"";
+        // Garante que o caminho seja absoluto e escapado corretamente
+        $escapedScriptPath = escapeshellarg($scriptPath);
+
+        // Monta o comando PowerShell com redirecionamento de erro
+        $command = "$powershellPath -ExecutionPolicy Bypass -NoProfile -File $escapedScriptPath 2>&1";
+
+        // Executa e captura a saída
         $output = shell_exec($command);
 
-        // Exibe a saída do script, se existir
+        // Exibe a saída formatada
         if ($output) {
-            echo "Resultado da execução:" . nl2br(htmlspecialchars($output));
+            echo "<h3>Resultado da execução:</h3><pre>" . htmlspecialchars($output) . "</pre>";
         } else {
-            echo "O script foi executado, mas não houve saída.";
+            echo "O script foi executado, mas não retornou nenhuma saída.";
         }
 
     } else {
@@ -37,3 +45,4 @@ if (isset($_GET['script'])) {
     echo "Erro: Nenhum script especificado.";
 }
 ?>
+
