@@ -9,9 +9,10 @@ $batFiles = [
     'usuarios'   => __DIR__ . '/scripts/criacaoUsuarios.ps1'
 ];
 
-// Verifica se a requisição contém o parâmetro "script"
+// Verifica se a requisição contém o parâmetro "script"0
 if (isset($_GET['script'])) {
     $scriptKey = $_GET['script'];
+    $poewshell = '"C:\Users\victo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows PowerShell\Windows PowerShell (x86).lnk"'
 
     // Verifica se o script solicitado existe no array permitido
     if (array_key_exists($scriptKey, $batFiles)) {
@@ -19,7 +20,7 @@ if (isset($_GET['script'])) {
 
         // Executa o script PowerShell e captura a saída
         $command = "powershell -ExecutionPolicy Bypass -File \"$scriptPath\"";
-        $output = shell_exec($command);
+        $output = shell_exec($poewshell $command);
 
         // Exibe a saída do script, se existir
         if ($output) {

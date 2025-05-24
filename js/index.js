@@ -68,7 +68,7 @@ fecharPopup.addEventListener("click", () => {
 });
 
 rodarScript.addEventListener("click", () => {
-    fetch(`php/executeScript.php?script=${acaoSelecionada}`)
+    fetch(`../php/executeScript.php?script=${acaoSelecionada}`)
         .then(response => response.text())
         .then(data => {
             alert("Script funcionou: " + data);
